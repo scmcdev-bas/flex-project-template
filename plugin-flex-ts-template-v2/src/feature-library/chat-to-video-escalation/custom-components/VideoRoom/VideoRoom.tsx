@@ -259,10 +259,22 @@ const VideoRoom: React.FunctionComponent<VideoRoomProps> = ({ task }) => {
             </Flex>
           ) : (
             <Flex padding="space50">
-              <Button variant="primary" onClick={connectVideo}>
-                <VideoOnIcon decorative />
-                <Template source={templates[StringTemplates.JoinVideoRoom]} />
-              </Button>
+              <div style={{ width: '300px', backgroundColor: '#2e2e2e', borderRadius: '10px' }}>
+                <div
+                  style={{
+                    width: '100%',
+                    marginTop: '10px',
+                    marginBottom: '10px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Button variant='secondary' onClick={connectVideo}>
+                    <VideoOnIcon decorative />
+                    <Template source={templates[StringTemplates.JoinVideoRoom]} />
+                  </Button>
+                </div>
+              </div>
             </Flex>
           )}
         </div>

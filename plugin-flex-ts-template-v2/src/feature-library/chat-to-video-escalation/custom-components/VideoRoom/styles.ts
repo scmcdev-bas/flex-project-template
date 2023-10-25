@@ -1,5 +1,7 @@
 export const taskContainerStyle = {
   display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   justifyContext: 'space-between',
   paddingLeft: 0,
   width: '100%',

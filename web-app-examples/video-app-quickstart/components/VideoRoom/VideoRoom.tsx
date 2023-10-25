@@ -380,47 +380,28 @@ export default function VideoRoom() {
                 height="40px"
               />
             </MediaFigure>
-            <MediaBody as="div">
-              <Text as="p" fontSize="fontSize70" fontWeight="fontWeightMedium">
-                Video Room - {code}
-              </Text>
-            </MediaBody>
           </MediaObject>
           <Grid
             padding="space10"
             gutter={["space20", "space60", "space90"]}
             vertical={[true, true, false]}
           >
-            <Column width="100%" height="auto">
-              <ParticipantContainer>
-                <VideoDivContainer id="remote-media-div"></VideoDivContainer>
-                <OverlayContent>
-                  <Text
-                    as="p"
-                    fontWeight="fontWeightMedium"
-                    color="colorTextBrandHighlight"
-                  >
-                    Remote Participant
-                  </Text>
-                </OverlayContent>
-              </ParticipantContainer>
+            <Column width="100%" height="auto" style={{ borderRadius: "10px" }}>
+              <div className="custom-div">
+                <ParticipantContainer>
+                  <VideoDivContainer id="remote-media-div"></VideoDivContainer>
+                </ParticipantContainer>
+              </div>
             </Column>
-            <Column width="100%">
-              <ParticipantContainer>
-                <VideoDivContainer id="local-media-div"></VideoDivContainer>
-                <OverlayContent>
-                  <Text
-                    as="p"
-                    fontWeight="fontWeightMedium"
-                    color="colorTextBrandHighlight"
-                  >
-                    Local Participant (you)
-                  </Text>
-                </OverlayContent>
-              </ParticipantContainer>
+            <Column width="100%" style={{ borderRadius: "10px" }}>
+              <div className="custom-div">
+                <ParticipantContainer>
+                  <VideoDivContainer id="local-media-div"></VideoDivContainer>
+                </ParticipantContainer>
+              </div>
             </Column>
           </Grid>
-          <FooterDiv>
+          <FooterDiv style={{ position: "fixed", bottom: 0, width: "100%", backgroundColor: "#f9f9f9", borderTop: "1px solid #eaeaea", padding: "10px 20px" }}>
             <Flex width="100%" hAlignContent={"center"} vAlignContent="center">
               <Stack orientation="horizontal" spacing="space50">
                 <Flex>
